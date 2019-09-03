@@ -47,6 +47,9 @@ PPQ.occurve(attr.name = "Sterile Concentration Assay", attr.unit="%LC", Llim=95,
 PPQ.occurve(attr.name = "Sterile Concentration Assay", attr.unit="%LC", Llim=95, Ulim=105, mu=98, sigma=seq(0.1, 10, 0.1), n=10, k=2.373, add.reference=TRUE)
 
 ## ----fig.height = 6, fig.width = 8, fig.align = "center"-----------------
+PPQ.occurve(attr.name = "Sterile Concentration Assay", attr.unit="%LC", Llim=95, Ulim=105, mu=98, sigma=seq(0.1, 10, 0.1), n=10, add.reference=TRUE)
+
+## ----fig.height = 6, fig.width = 8, fig.align = "center"-----------------
 mu <- seq(95,105,0.05)
 sigma <- seq(0.1,1.75,0.05)
 PPQ.ctplot(attr.name = "Sterile Concentration Assay", attr.unit = "%LC", Llim=95, Ulim=105, mu = mu, sigma = sigma, k=2.373)
@@ -121,4 +124,11 @@ ti.ctplot(attr.name = "Sterile Concentration Assay", attr.unit = "%LC", Llim=95,
 
 ## ----fig.height = 6, fig.width = 8, fig.align = "center", warning=FALSE----
 ti.ctplot(attr.name = "Extractable Volume", attr.unit = "% of NV=1mL", Llim = 100, Ulim = Inf, mu=seq(100, 110, 0.5), sigma=seq(0.2, 15 ,0.5), n=40, alpha = 0.05, coverprob = 0.675, side=1)
+
+## ------------------------------------------------------------------------
+ti.pp(Llim=-0.2, Ulim=0.2, mu=0.1, sigma=0.15, n=2)
+
+## ----fig.height = 6, fig.width = 8, fig.align = "center", warning=FALSE----
+heatmap_ly(attr.name = "Thickness", attr.unit = "%",Llim = -0.2, Ulim = 0.2, mu = seq(-0.2, 0.2, 0.001), sigma = seq(0,0.2, 0.001), test.point=data.frame(c(0.1,-0.05),c(0.15,0.05)), n=2, dynamic = T)
+
 
